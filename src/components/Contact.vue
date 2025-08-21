@@ -14,7 +14,7 @@
       </li>
       <li>
         <font-awesome-icon :icon="['fas', 'home']" />
-        <span>11920 Nebesna Dr<br />Anchorage, AK 99507</span>
+        <span>1302 Morgan Ln<br />Broken Bow, OK 74728</span>
       </li>
     </ul>
 
@@ -31,7 +31,7 @@
         </a>
       </li>
       <li>
-        <a href="/miriam-woolly-resume/MiriamWoollyResumeNoReferences.pdf" target="_blank">
+        <a href="MiriamWoollyResumeNoReferences.pdf" target="_blank">
           <font-awesome-icon :icon="['fas', 'file-pdf']" />
         </a>
       </li>
