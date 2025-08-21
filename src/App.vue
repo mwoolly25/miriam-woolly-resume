@@ -2,21 +2,21 @@
   <div id="app">
     <Header />
 
-  <main class="layout">
-  <!-- Left Column -->
-  <div class="left-column">
-    <AnimatedSection class="experience-section"><Experience /></AnimatedSection>
-    <AnimatedSection class="projects-section"><Projects /></AnimatedSection>
-  </div>
+    <main class="layout">
+      <!-- Left Column -->
+      <div class="left-column">
+        <AnimatedSection class="experience-section"><Experience /></AnimatedSection>
+        <AnimatedSection class="projects-section"><Projects /></AnimatedSection>
+      </div>
 
-  <!-- Right Column -->
-  <div class="right-column">
-    <AnimatedSection class="aboutme-section"><AboutMe /></AnimatedSection>
-    <AnimatedSection class="contact-section"><Contact /></AnimatedSection>
-    <AnimatedSection class="education-section"><Education /></AnimatedSection>
+      <!-- Right Column -->
+      <div class="right-column">
+        <AnimatedSection class="aboutme-section"><AboutMe /></AnimatedSection>
+        <AnimatedSection class="contact-section"><Contact /></AnimatedSection>
+        <AnimatedSection class="education-section"><Education /></AnimatedSection>
+      </div>
+    </main>
   </div>
-</main>
-</div>
 </template>
 
 <script>
@@ -34,7 +34,6 @@ export default {
 };
 </script>
 
-
 <style>
 :root {
   --primary-color: #e1c790;
@@ -42,7 +41,7 @@ export default {
   --text-dark: #000;
 }
 
-/* Dark mode overrides */
+/* Dark mode */
 html.dark {
   --bg-light: #30595b;
   --text-dark: #fff;
@@ -55,8 +54,7 @@ html {
   color: black;
 }
 
-
-/* Layout grid */
+/* Layout grid for desktop */
 .layout {
   display: grid;
   grid-template-columns: 3fr 2fr;
@@ -70,9 +68,10 @@ html {
 .right-column {
   display: flex;
   flex-direction: column;
-  gap: 2rem; /* 🔑 spacing between Experience/Skills & Contact/Education */
 }
-
+.left-column {
+  gap: 2rem;
+}
 /* Card styling */
 .experience,
 .projects,
@@ -82,7 +81,7 @@ html {
   border-radius: 8px;
   color: var(--text-dark);
   transition: all 0.3s ease;
-  padding: 1.5rem; /* 🔑 consistent padding inside */
+  padding: 1.5rem;
 }
 
 /* Hover effect */
@@ -104,17 +103,31 @@ svg:hover {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
+/* Mobile layout fix */
 @media (max-width: 768px) {
   .layout {
-    grid-template-columns: 1fr; /* stack everything */
+    display: flex;
+    flex-direction: column;
   }
 
+  .left-column,
+  .right-column {
+    display: contents;
+  }
+
+  .experience-section,
+  .projects-section,
+  .aboutme-section,
+  .contact-section,
+  .education-section {
+    width: 100%; 
+  }
+  
   .aboutme-section   { order: 1; }
   .contact-section   { order: 2; }
   .experience-section{ order: 3; }
   .projects-section  { order: 4; }
   .education-section { order: 5; }
 }
-
 
 </style>

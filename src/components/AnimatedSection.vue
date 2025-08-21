@@ -15,7 +15,7 @@ export default {
       mounted(el, binding) {
         const observer = new IntersectionObserver(([entry]) => {
           if (entry.isIntersecting) binding.value();
-        }, { threshold: 0.2 }); // reveal when 20% visible
+        }, { threshold: 0.2 });
         observer.observe(el);
       }
     }
