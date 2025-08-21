@@ -1,11 +1,8 @@
 <template>
   <section class="about card">
     <h3>About Me</h3>
-
     <div class="about-text">
-      <!-- Floated Profile Picture -->
       <img src="/miriam.jpg" alt="Miriam Woolly" class="about-image" />
-
       <p>
         I’m a <strong>Full-Stack Developer</strong> with experience designing, building, 
         and maintaining applications across both front-end and back-end stacks. 
@@ -42,8 +39,8 @@ export default {
   float: left;
   width: 120px;
   height: 120px;
-  margin: 0 1rem 1rem 0; /* space between image and text */
-  border-radius: 50%; /* circular image */
+  margin: 0 1rem 1rem 0;
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid var(--primary-color);
 }
@@ -53,7 +50,7 @@ export default {
   line-height: 1.5;
 }
 
-/* On mobile, center image instead of float */
+
 @media (max-width: 768px) {
   .about-image {
     float: none;

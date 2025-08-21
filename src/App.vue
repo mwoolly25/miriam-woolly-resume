@@ -63,7 +63,6 @@ html {
   align-items: start;
 }
 
-/* Columns stack cards with spacing */
 .left-column,
 .right-column {
   display: flex;
@@ -94,7 +93,7 @@ html {
   transform: translateY(-3px);
 }
 
-/* Subtle hover animations */
+/* Hover animations */
 button:hover,
 a:hover,
 svg:hover {

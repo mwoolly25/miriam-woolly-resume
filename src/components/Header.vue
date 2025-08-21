@@ -7,12 +7,10 @@
 
     </div>
 
-    <!-- Logo Overlapping Bottom Border -->
     <div class="logo-wrapper">
       <img src="../assets/mw.png" alt="MW Logo" class="logo" />
     </div>
 
-    <!-- Dark/Light Mode Toggle -->
     <button class="theme-toggle" @click="toggleTheme">
       <font-awesome-icon :icon="isDark ? 'sun' : 'moon'" />
     </button>

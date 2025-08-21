@@ -2,7 +2,6 @@
   <section class="experience">
     <h3>Experience</h3>
 
-    <!-- Carousel with autoplay + pause on hover -->
     <div class="carousel" @mouseenter="pauseAutoPlay" @mouseleave="resumeAutoPlay">
       <transition name="fade-slide" mode="out-in">
         <div :key="currentIndex" class="job-card">
@@ -20,7 +19,6 @@
       </transition>
     </div>
 
-    <!-- Controls -->
     <div class="controls">
       <button @click="prevSlide">‹</button>
       <button @click="toggleAutoPlay">

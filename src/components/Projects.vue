@@ -2,7 +2,6 @@
   <section class="projects">
     <h3>Projects</h3>
 
-    <!-- Carousel with autoplay + pause on hover -->
     <div class="carousel" @mouseenter="pauseAutoPlay" @mouseleave="resumeAutoPlay">
       <transition name="fade-slide" mode="out-in">
         <div :key="currentIndex" class="job-card">
@@ -136,7 +135,7 @@ html.dark {
 }
 
 .job-card {
-  position: relative;  /* remove absolute so height adjusts */
+  position: relative;
   width: 100%;
   padding: 1rem;
   border: 1px solid var(--primary-color);
