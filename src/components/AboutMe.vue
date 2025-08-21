@@ -6,7 +6,7 @@
       <p>
         I’m a <strong>Full-Stack Developer</strong> with experience designing, building, 
         and maintaining applications across both front-end and back-end stacks. 
-        Skilled in <strong>HTML, JavaScript, jQuery, Vue.js, Angular, .NET/C#, SQL, Bootstrap, and Tailwind</strong>, 
+        Skilled in <strong>HTML, JavaScript, jQuery, Vue.js, Angular, .NET/C#, and SQL.</strong>, 
         with a strong focus on creating efficient APIs and scalable solutions.
       </p>
       <p>
