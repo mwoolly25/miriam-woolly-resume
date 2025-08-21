@@ -31,7 +31,7 @@
         </a>
       </li>
       <li>
-        <a href="/resume.pdf" target="_blank">
+        <a href="/MiriamWoollyResume.pdf" target="_blank">
           <font-awesome-icon :icon="['fas', 'file-pdf']" />
         </a>
       </li>

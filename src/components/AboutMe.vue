@@ -37,4 +37,5 @@ export default {
   margin-bottom: 1rem;
   line-height: 1.5;
 }
+
 </style>
