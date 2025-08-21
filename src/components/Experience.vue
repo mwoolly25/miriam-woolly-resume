@@ -23,6 +23,9 @@
     <!-- Controls -->
     <div class="controls">
       <button @click="prevSlide">‹</button>
+      <button @click="toggleAutoPlay">
+        {{ isPaused ? "▶" : "❚❚" }}
+      </button>
       <button @click="nextSlide">›</button>
     </div>
   </section>
@@ -35,6 +38,7 @@ export default {
     return {
       currentIndex: 0,
       interval: null,
+      isPaused: false,
       jobs: [
         {
           title: "Web Developer II",
@@ -72,13 +76,24 @@ export default {
     startAutoPlay() {
       this.interval = setInterval(() => {
         this.nextSlide();
-      }, 6000); // every 6s
+      }, 6000);
+      this.isPaused = false;
     },
     pauseAutoPlay() {
       clearInterval(this.interval);
+      this.isPaused = true;
     },
     resumeAutoPlay() {
-      this.startAutoPlay();
+      if (!this.isPaused) {
+        this.startAutoPlay();
+      }
+    },
+    toggleAutoPlay() {
+      if (this.isPaused) {
+        this.startAutoPlay();
+      } else {
+        this.pauseAutoPlay();
+      }
     },
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.jobs.length;
@@ -108,25 +123,28 @@ html.dark {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
- .carousel {
-  position: relative;
-  overflow: visible;   /* let content expand */
-  min-height: auto;    /* let height adapt */
-  display: flex;
-  align-items: stretch;
-}
+  .carousel {
+    position: relative;
+    overflow: visible;
+    display: flex;
+    align-items: stretch;
+  }
 
-.job-card {
-  position: relative;  /* remove absolute so height adjusts */
-  width: 100%;
-  padding: 1rem;
-  border: 1px solid var(--primary-color);
-  border-radius: 8px;
-  background: var(--bg-light);
-  box-sizing: border-box;
-
+  .job-card {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background: var(--bg-light);
+    box-sizing: border-box;
 
     h4 {
       font-size: 1.2rem;

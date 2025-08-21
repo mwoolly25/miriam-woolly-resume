@@ -21,6 +21,9 @@
     <!-- Controls -->
     <div class="controls">
       <button @click="prevSlide">‹</button>
+      <button @click="toggleAutoPlay">
+        {{ isPaused ? "▶" : "❚❚" }}
+      </button>
       <button @click="nextSlide">›</button>
     </div>
   </section>
@@ -33,6 +36,7 @@ export default {
     return {
       currentIndex: 0,
       interval: null,
+      isPaused: false,
       jobs: [
         {
           title: "CNO Election Service",
@@ -65,6 +69,7 @@ export default {
   },
   methods: {
     startAutoPlay() {
+      clearInterval(this.interval);
       this.interval = setInterval(() => {
         this.nextSlide();
       }, 6000);
@@ -73,7 +78,18 @@ export default {
       clearInterval(this.interval);
     },
     resumeAutoPlay() {
-      this.startAutoPlay();
+      if (!this.isPaused) {
+        this.startAutoPlay();
+      }
+    },
+    toggleAutoPlay() {
+      if (this.isPaused) {
+        this.isPaused = false;
+        this.startAutoPlay();
+      } else {
+        this.isPaused = true;
+        this.pauseAutoPlay();
+      }
     },
     nextSlide() {
       this.currentIndex = (this.currentIndex + 1) % this.jobs.length;
@@ -85,6 +101,7 @@ export default {
   },
 };
 </script>
+
 
 <style lang="scss">
 :root {
@@ -103,12 +120,17 @@ html.dark {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 1rem;
+    padding-bottom: 0.3rem; 
+    border-bottom: 2px solid var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
   }
 
 .carousel {
   position: relative;
-  overflow: visible;   /* let content expand */
-  min-height: auto;    /* let height adapt */
+  overflow: visible;
+  min-height: auto;
   display: flex;
   align-items: stretch;
 }

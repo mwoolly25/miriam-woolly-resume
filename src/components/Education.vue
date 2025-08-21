@@ -1,7 +1,6 @@
 <template>
   <section class="education card">
     <h3>
-      <font-awesome-icon :icon="['fas', 'graduation-cap']" class="icon" />
       Education
     </h3>
 

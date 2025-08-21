@@ -2,7 +2,6 @@
   <section class="contact card">
     <h3>Contact</h3>
 
-    <!-- Contact Info -->
     <ul class="contact-info">
       <li>
         <font-awesome-icon :icon="['fas', 'phone']" />
@@ -18,7 +17,6 @@
       </li>
     </ul>
 
-    <!-- Social Media -->
     <ul class="social-links">
       <li>
         <a href="https://www.linkedin.com/in/miriam-woolly-348750125/" target="_blank">
@@ -57,7 +55,6 @@ html.dark {
   --text-dark: #fff;
 }
 
-/* Shared card style */
 .card {
   padding: 1.5rem;
   border: 1px solid var(--primary-color);
