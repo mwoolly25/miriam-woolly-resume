@@ -4,16 +4,8 @@
 
     <ul class="contact-info">
       <li>
-        <font-awesome-icon :icon="['fas', 'phone']" />
-        <span>(907) 317-7125</span>
-      </li>
-      <li>
         <font-awesome-icon :icon="['fas', 'envelope']" />
         <a href="mailto:mvilleda@protonmail.com">mvilleda@protonmail.com</a>
-      </li>
-      <li>
-        <font-awesome-icon :icon="['fas', 'home']" />
-        <span>1302 Morgan Ln<br />Broken Bow, OK 74728</span>
       </li>
     </ul>
 
