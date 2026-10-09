@@ -9,7 +9,7 @@
   "build": "vite build",
   "build:github": "vite build --mode github",
   "deploy:github": "npm run build:github && gh-pages -d dist -b gh-pages",
-  "deploy:domain": "npm run build && copy CNAME dist\\ && gh-pages -d dist -b gh-pages",
+  "deploy:domain": "npm run build && gh-pages -d dist -b gh-pages",  
   "clean:pages": "gh-pages-clean"
 },
   "dependencies": {
