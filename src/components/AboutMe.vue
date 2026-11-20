@@ -60,8 +60,8 @@
       web experiences.
     </p>
 
-   <a
-  href="/MiriamWoollyResumeNoReferences.pdf"
+<a
+  href="/MiriamWoollyResumeNoReferences.pdf?v=20261120"
   class="resume-link"
   target="_blank"
   rel="noopener noreferrer"

@@ -155,11 +155,12 @@
             GitHub ↗
           </a>
 
-          <a
-            href="/MiriamWoollyResumeNoReferences.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+         <a
+  href="/MiriamWoollyResumeNoReferences.pdf?v=20261120"
+  class="resume-link"
+  target="_blank"
+  rel="noopener noreferrer"
+>
             Résumé ↗
           </a>
         </div>
