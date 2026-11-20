@@ -60,12 +60,12 @@
       web experiences.
     </p>
 
-    <a
-      href="/Miriam-Woolly-Resume.pdf"
-      class="resume-link"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+  <a
+  href="/MiriamWoollyResumeNoReferences.pdf"
+  class="resume-link"
+  target="_blank"
+  rel="noopener noreferrer"
+  >
       View résumé
       <span aria-hidden="true">→</span>
     </a>
